@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+:root {
+    --primary-color : #231942;
+    --secondary-color : #87daeb;
+    --light-text: #fff;
+    --heading-title-family: 'Montserrat', sans-serif;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2 {
+    font-family: var(--heading-title-family);
+}
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: var(--secondary-color);
+}
+
+#navbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: end;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: var(--light-text);
+}
+#navbar ul li a:hover {
+    color: var(--primary-color);
+}
+
+#welcome-section, #contact {
+    height: 100vh;
+    background: var(--primary-color);
+    color: var(--light-text);
+    padding: 3rem;
+}
+
+#home {
+    margin-top: 20vh;
+}
+.lg-heading {
+    font-size: 5rem;
+}
+.underline {
+    border-bottom: 3px solid var(--secondary-color);
+    border-right: 3px solid var(--secondary-color);
+    padding-right: 1rem;
+    cursor: default; 
+}
+.underline:hover {
+    color: var(--secondary-color);
+}
+.underline-secondary:hover {
+    color: #ffb3c1;
+    
+}
+.underline-secondary {
+    border-top: 3px solid #ffb3c1;
+    border-left: 3px solid #ffb3c1;
+    padding-left: 1rem;
+    cursor: default;
+}
+.subtitle {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+#projects {
+    padding-bottom: 2rem;
+    padding-top: 10vh;
+}
+.project-tile {
+    width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 10vh auto 0;
+}
+#projects > h1 {
+    font-size: 4rem;
+    text-align: center;
+    padding: 3rem 0 0;
+    font-weight: 500;
+}
+
+img {
+    width: 100%;
+}
+
+.project {
+    background: var(--primary-color);
+    border: 3px solid transparent;
+    border-radius: 5px;
+}
+.project > a {
+    text-decoration: none;
+    color: var(--light-text);
+    
+}
+.project > a:hover {
+    opacity: 0.7;
+}
+
+.project-title {
+    font-weight: 500;
+    padding: 0.5rem 1rem 0.8rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+#contact {
+    text-align: center;
+    padding-top: 20vh;
+}
+#contact > p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 2rem;
+}
+
+.social > a {
+    font-size: 3rem;
+    padding: 1rem;
+    color: var(--secondary-color);
+}
+.social > a:hover {
+    color: #ffb3c1;
+}
+
+footer {
+    background-color: var(--primary-color);
+    border-top: 3px solid var(--secondary-color);
+    color: var(--light-text);
+}
+
+footer > .copy {
+    text-align: center;
+    padding: 2rem;
+}
+
+@media screen and (max-width: 810px) {
+    #navbar ul {
+        justify-content: center;
+    }
+
+    .lg-heading {
+        font-size: 4rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+    .underline {
+    border-bottom: 3px solid transparent;
+    border-right: 3px solid transparent;
+    }
+    .project-tile {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        margin: 0;
+    }
+
+    #projects, #contact {
+        height: auto;
+    }
+
+    #projects > h1 {
+        font-size: 3rem;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    #welcome-section, #contact {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .lg-heading {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    #contact > .lg-heading > .underline-secondary {
+        border-top: 3px solid transparent;
+        border-left: 3px solid transparent;
+    }
+}
