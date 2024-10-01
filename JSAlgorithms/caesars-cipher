@@ -1,0 +1,15 @@
+function rot13(str) {
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let newStr = '';
+    for (let i = 0; i < str.length; i++) {
+        let letterIndex = letters.indexOf(str[i]);
+        if (letterIndex == -1) {
+            newStr += str[i];
+        } else {
+            newStr += letters[(letterIndex + 13) % 26];
+        }
+    }
+    return newStr;
+}
+
+console.log(rot13("SERR PBQR PNZC"));
